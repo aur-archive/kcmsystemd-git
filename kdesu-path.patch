@@ -1,0 +1,11 @@
+--- a/src/kcmsystemd.cpp	2015-03-29 16:55:14.528632048 +0300
++++ b/src/kcmsystemd.cpp	2015-03-29 16:56:43.517458738 +0300
+@@ -1719,7 +1719,7 @@
+     QProcess editor (this);
+     bool r = editor.startDetached(app, args);
+     if (!r && app == "kdesu")
+-      r = editor.startDetached(kdePrefix + "/lib/libexec/kdesu", args);
++      r = editor.startDetached(kdePrefix + "/lib/kf5/kdesu", args);
+     if (!r)
+       KMessageBox::error(this, i18n("Failed to open unit file!"));
+     return;
